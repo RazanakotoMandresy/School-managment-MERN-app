@@ -1,0 +1,27 @@
+.dropdown {
+  position: fixed;
+  display: inline-block;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.3vw;
+  margin-top: 8%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 6px 6px black;
+  border-radius: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media only screen and (max-width:1333px) {
+.dropdown{
+  margin: 0;
+}
+}

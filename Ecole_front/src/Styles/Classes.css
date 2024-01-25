@@ -1,0 +1,162 @@
+.studentsInfo img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.studentsInfo ul {
+  margin-left: 0%;
+  margin-right: 10%;
+  background-image: url(back.jpg);
+  border-radius: 25px;
+  width: 80%;
+}
+.studentsInfo ul:hover {
+  opacity: 0.8;
+  box-shadow: 10px 10px #2b4f71;
+}
+.studentsInfo li {
+  display: inline;
+  font-size: 20px;
+  margin: 2%;
+}
+.StudentsButtons {
+  float: right;
+}
+.studentsInfo .studentsTxt {
+  font-size: 25px;
+  margin-top: 50px;
+  float: right;
+  color: #2b4f71;
+}
+.StudentsButtons button {
+  font-size: 25px;
+  padding: 15px;
+  background-color: #2b4f75;
+}
+.StudentsButtons :hover {
+  background-color: #cccccc;
+}
+@media only screen and (max-width: 1600px) {
+  .studentsInfo img {
+    height: 80px;
+    width: 80px;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1390px) {
+  .studentsInfo img {
+    height: 60px;
+    width: 60px;
+    margin-left: -5%;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 20px;
+  }
+  .StudentsButtons button {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 1290px) {
+  .studentsInfo img {
+    height: 50px;
+    width: 50px;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 17px;
+    float: none;
+    margin: 0.4%;
+  }
+  .StudentsButtons button {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .studentsInfo ul {
+    margin-left: -10%;
+    width: 104%;
+  }
+}
+@media only screen and (max-width: 738px) {
+  .studentsInfo img {
+    height: 45px;
+    width: 45px;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 15px;
+    float: none;
+    margin: 0.4%;
+  }
+  .StudentsButtons button {
+    font-size: 15px;
+    padding: 7px;
+  }
+  .studentsInfo ul {
+    margin-left: -10%;
+    width: 103%;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .studentsInfo img {
+    height: 35px;
+    width: 35px;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 12px;
+    float: none;
+    margin: 0.4%;
+  }
+  .StudentsButtons button {
+    font-size: 12px;
+    padding: 4px;
+    margin-top: -10px;
+  }
+  .studentsInfo ul {
+    margin-left: -15%;
+    width: 104%;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .studentsInfo img {
+    height: 32px;
+    width: 32px;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 10px;
+    float: right;
+    margin-top: 10px;
+  }
+  .StudentsButtons button {
+    font-size: 12px;
+    padding: 4px;
+    margin-top: -10px;
+  }
+  .studentsInfo ul {
+    margin-left: -15%;
+    width: 104%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .studentsInfo img {
+    height: 32px;
+    width: 32px;
+    margin-left: 2%;
+  }
+  .studentsInfo .studentsTxt {
+    font-size: 10px;
+    float: right;
+    margin-top: 10px;
+  }
+  .StudentsButtons button {
+    font-size: 12px;
+    padding: 4px;
+    margin-top: -10px;
+  }
+  .studentsInfo ul {
+    margin-left: 0%;
+    width: 104%;
+  }
+}

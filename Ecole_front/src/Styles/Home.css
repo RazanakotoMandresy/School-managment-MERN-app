@@ -1,0 +1,59 @@
+.Home ul {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  color: #f3f6ff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.Home ul li:not(.butli, .butli2) {
+  background-image: url("back.jpg");
+  background-size: cover;
+  height: 90%;
+  width: auto;
+  padding-left: 2%;
+  border-radius: 25px;
+  margin: 5%;
+}
+.Home ul li:not(.butli, .butli2):hover {
+  opacity: 0.9;
+  box-shadow: 10px 10px #2b4f71;
+}
+.but {
+  align-items: center;
+  width: 98%;
+  background-color: #24293e;
+  border-radius: 10px;
+  padding: 2% 0 2% 0;
+}
+.butli button {
+  font-size: 20px;
+  float: left;
+  margin-left: 10%;
+  background: none;
+  background-color: #f4f5fc;
+  border-radius: 10px;
+  border: 10%;
+  padding: 3%;
+}
+.butli2 a {
+  font-size: 20px;
+  padding: 3%;
+  color: #24293e;
+  float: right;
+  margin-right: 10%;
+  background-color: #f4f5fc;
+  border-radius: 10px;
+}
+.but:hover {
+  background-color: #2b4f71;
+}
+.butli button:hover {
+  background-color: #657a97;
+  width: 40%;
+}
+.butli2 a:hover {
+  border: solid;
+  background-color: #657a97;
+  width: 30%;
+  border-radius: 10px;
+}

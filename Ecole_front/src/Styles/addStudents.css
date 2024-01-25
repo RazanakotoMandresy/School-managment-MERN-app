@@ -1,0 +1,126 @@
+.addSection {
+  top: 15%;
+  position: fixed;
+  background-color: #24293e;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  border-radius: 25px;
+  margin-left: 38%;
+  padding: 10px;
+}
+.addSection input[type="text"] {
+  width: 80%;
+  text-align: center;
+  padding: 8px;
+  border-radius: 25px;
+  border: none;
+  background-color: #cccccc;
+  font-size: 18px;
+}
+.addSection input[type="text"]:focus {
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+}
+.addSection input[type="file"] {
+  display: none;
+}
+.imagesIcon {
+  font-size: 35px;
+  background-color: #f4f5fc;
+  padding: 10px;
+  border-radius: 10px;
+}
+.addStudButton {
+  display: flex;
+  margin-left: 35%;
+  margin-top: 25px;
+  width: 30%;
+  background-color: #cccccc;
+  border: none;
+  height: 40px;
+}
+.addStudButton:hover {
+  background-color: #2b4f71;
+}
+.addStudButton p {
+  margin-left: 28%;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin-top: 0px;
+}
+.fermer {
+  float: right;
+  margin-right: 8px;
+  font-size: 18px;
+  padding: 0;
+  height: 22px;
+  width: 22px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff7a63;
+  color: #24293e;
+}
+.fermer:hover {
+  background-color: #f4f5fc;
+}
+.addSection:hover {
+  box-shadow: 4px 4px;
+}
+@media only screen and (max-width: 1555px) {
+  .addSection {
+    margin-left: 35%;
+  }
+}
+@media only screen and (max-width: 1270px) {
+  .addSection {
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .addSection {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .addSection {
+    margin-left: 25%;
+    font-size: 20px;
+    padding: 10px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 675px) {
+  .addSection {
+    margin-left: 20%;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .addSection {
+    margin-left: 10%;
+    font-size: 18px;
+    padding: 10px;
+    width: 250px;
+    height: 300px;
+  }
+  .addSection input[type="text"] {
+    width: 50%;
+    font-size: 14px;
+  }
+  .addSection input[type="text"]:focus {
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+  }
+  .addStudButton p {
+    font-size: 18px;
+  }
+}

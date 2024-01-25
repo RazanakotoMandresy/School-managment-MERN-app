@@ -1,0 +1,33 @@
+.addButton {
+  background-color: #0a032a;
+  position: fixed;
+  width: 2%;
+  right: 0;
+  padding: 10px;
+  transition: width 1s;
+  border-radius: 25px;
+}
+.addButton:hover {
+  width: 8%;
+  background-color: #044750;
+}
+.addButton button {
+  border: none;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: inherit;
+  color: wheat;
+}
+.addButton button:hover {
+  background-color: #9bc6a8;
+}
+@media only screen and (max-width: 1500px) {
+  .addButton {
+    border-radius: 25px 0px 0px 25px;
+    width: 5%;
+  }
+  .addButton button {
+
+  }
+}

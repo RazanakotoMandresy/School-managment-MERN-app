@@ -1,0 +1,15 @@
+/* App contient que les styles de bases */
+body {
+  background-color: #657a97;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 1600px) {
+  body {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body {
+    margin-top: 12%;
+  }
+}

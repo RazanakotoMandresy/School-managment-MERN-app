@@ -1,0 +1,78 @@
+.Post {
+  /* background-color: #24293e; */
+  margin-top: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  background-image: url(back.jpg);
+  background-size: cover;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-shadow: 1px 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.Post h3 {
+  font-size: 28px;
+}
+.Post h4 {
+  font-size: 20px;
+}
+.Post input {
+  width: 75%;
+  padding: 1.5%;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+}
+.Post input:focus{
+    outline: none;
+    padding: 1.8%;
+}
+.Post button {
+  padding: 1%;
+  background: none;
+  border: none;
+  font-size: 35px;
+}
+.Post button:hover {
+  color: #8ebbff;
+}
+@media only screen and (max-width: 1024px) {
+  .Post {
+    margin-top: 25%;
+  }
+  .Post h3 {
+    font-size: 22px;
+  }
+  .Post h4 {
+    font-size: 18px;
+  }
+  .Post input {
+    font-size: 15px;
+  }
+  .Post button{
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Post {
+    margin-top: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .Post h3 {
+    font-size: 22px;
+  }
+  .Post h4 {
+    font-size: 18px;
+  }
+  .Post input {
+    font-size: 15px;
+  }
+  .Post button{
+    font-size: 12px;
+  }
+}

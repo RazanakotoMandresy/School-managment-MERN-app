@@ -1,0 +1,94 @@
+.register {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  background: url(back.jpg) no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-shadow: 1px 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 700px;
+  height: auto;
+}
+
+.register h1 {
+  font-size: 25px;
+}
+.register input {
+  width: 70%;
+  border: none;
+  padding: 2%;
+  background: none;
+  opacity: 0.98;
+  border-bottom: 1px solid;
+  margin-bottom: 1%;
+  text-align: center;
+  color: black;
+}
+.register input:focus {
+  outline: none;
+  padding: 2.5%;
+}
+.register button {
+  width: 45%;
+  padding: 1.5%;
+  background-color: #24293e;
+  margin-top: 2%;
+  transition: 2s width;
+}
+.register button:hover {
+  width: 80%;
+  padding: 1.8%;
+}
+@media only screen and (max-width: 1750px) {
+  .register {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 1750px) {
+  .register {
+    width: 550px;
+  }
+}
+/* 1000 tablets */
+@media only screen and (max-width: 1000px) {
+  .register {
+    margin-top: 15%;
+    width: 400px;
+  }
+  .register h1 {
+    font-size: 20px;
+  }
+  .register p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .register {
+    margin-top: 20%;
+    width: 350px;
+  }
+  .register h1 {
+    font-size: 20px;
+  }
+  .register p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .register {
+    margin-top: 25%;
+    width: 300px;
+  }
+  .register h1 {
+    font-size: 18px;
+  }
+  .register p {
+    font-size: 10px;
+  }
+}
