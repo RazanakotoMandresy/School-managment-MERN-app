@@ -13,7 +13,7 @@ const ClassesStudent = ({ open, handleClose }) => {
       setStud(stud.filter((student) => student._id !== id));
       await axios.delete(`${url}/students/${id}`);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
     }
   };
   useEffect(() => {

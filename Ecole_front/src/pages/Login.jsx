@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "../Styles/Register.css";
 import { url } from "../../url";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 const Login = () => {
   const [passwords, setPasswords] = useState("");
   const [email, setEmail] = useState("");
+  const [navi, setNavi] = useState(false);
   const login = async (e) => {
     e.preventDefault();
     try {
@@ -14,11 +15,16 @@ const Login = () => {
         password: passwords,
       });
       await localStorage.setItem("token", data.token);
+      setPasswords("");
+      setEmail("");
+      setNavi(true);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
     }
   };
-
+  if (navi) {
+    return <Navigate to={"/"} />;
+  }
   return (
     <div className="register">
       <h1>connexion</h1>

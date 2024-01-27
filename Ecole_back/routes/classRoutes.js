@@ -9,9 +9,9 @@ const authentification = require("../middleware/authentification");
 
 const router = Router();
 
-router.post("/", createClass);
+router.post("/", authentification, createClass);
 router.get("/", getAllClass);
 // getSignle class est egale a getAllStudents.
-router.delete("/:id", deleteClass);
+router.delete("/:id", authentification, deleteClass);
 router.get("/:id", getSingleClasse);
 module.exports = router;

@@ -3,11 +3,16 @@ import "../Styles/Home.css";
 import axios from "axios";
 import ClassesContent from "./ClassesContent";
 import { url } from "../../url";
+import { authentified } from "../../authentified";
 const Home = (_) => {
   const [classes, setClasses] = useState([]);
   const handleDelete = async (_id) => {
-    setClasses(classes.filter((classe) => classe._id !== _id));
-    await axios.delete(`${url}/${_id}`);
+    try {
+      setClasses(classes.filter((classe) => classe._id !== _id));
+      await axios.delete(`${url}/${_id}`, authentified);
+    } catch (error) {
+      console.log(error.response.data);
+    }
   };
   useEffect(() => {
     const getData = async () => {
@@ -24,7 +29,7 @@ const Home = (_) => {
     <div className="Home">
       <ul>
         {classes.map((classe) => {
-          const { _id  } = classe;
+          const { _id } = classe;
           return (
             <li key={_id}>
               <ClassesContent {...classe} handleDelete={handleDelete} />

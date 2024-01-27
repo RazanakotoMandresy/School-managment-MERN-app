@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "../Styles/Register.css";
 import { url } from "../../url";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 const Register = () => {
   const [name, setName] = useState("");
   const [passwords, setPasswords] = useState("");
   const [email, setEmail] = useState("");
+  const [navi, setNavi] = useState(false);
   const register = async (e) => {
     e.preventDefault();
     try {
@@ -20,7 +21,9 @@ const Register = () => {
       console.log(error);
     }
   };
-
+  if (navi) {
+    return <Navigate to={"/"} />;
+  }
   return (
     <div className="register">
       <h1>Inscription</h1>

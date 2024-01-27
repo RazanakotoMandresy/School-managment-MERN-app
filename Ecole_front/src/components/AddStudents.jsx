@@ -4,6 +4,7 @@ import "../Styles/addStudents.css";
 import axios from "axios";
 import { url } from "../../url";
 import { Navigate, useParams } from "react-router-dom";
+import { authentified } from "../../authentified";
 const AddStudents = ({ handleClose }) => {
   const [name, setName] = useState("");
   const [imgStudent, setFile] = useState("");
@@ -13,15 +14,19 @@ const AddStudents = ({ handleClose }) => {
     e.preventDefault();
     axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
     try {
-      await axios.post(`${url}/students/${id}`, {
-        name,
-        imgStudent: imgStudent[0],
-      });
+      await axios.post(
+        `${url}/students/${id}`,
+        {
+          name,
+          imgStudent: imgStudent[0],
+        },
+        authentified
+      );
       setName("");
       setFile("");
       setAdded(true);
     } catch (error) {
-      console.log(error);
+      console.log(error.response);
     }
   };
   if (added) {

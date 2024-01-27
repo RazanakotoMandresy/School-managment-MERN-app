@@ -1,0 +1,36 @@
+.singleStudent {
+  background-color: #d3f5cf;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: auto;
+  padding: 0 15px 15px 15px;
+  border-radius: 25px;
+  top: 15%;
+}
+.singleStudent button {
+  border: none;
+  font-size: 20px;
+  background: none;
+}
+.singleStudent button:hover {
+  background-color: #c9cfdf;
+  border-radius: 50%;
+}
+.singleStudent .more {
+  float: right;
+}
+.singleStudent .head p {
+  display: inline-block;
+  font-size: 22px;
+  margin-left: 20%;
+  font-family: monospace;
+}
+
+.singleStudent .content {
+  background-color: #e9edf8;
+  padding: 25px;
+  margin-top: -10px;
+  border-radius: 25px;
+  font-size: 18px;
+}

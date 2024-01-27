@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 
 const classSchema = new Schema(
   {
@@ -7,6 +7,7 @@ const classSchema = new Schema(
     LisOfStudents: {
       type: [""],
     },
+    createdBy: { type: Types.ObjectId },
   },
   { timestamps: true }
 );
