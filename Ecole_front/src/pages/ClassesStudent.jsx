@@ -8,14 +8,6 @@ import AddStudents from "../components/AddStudents";
 const ClassesStudent = ({ open, handleClose }) => {
   const { id } = useParams();
   const [stud, setStud] = useState([]);
-  const handleDeletes = async (id) => {
-    try {
-      setStud(stud.filter((student) => student._id !== id));
-      await axios.delete(`${url}/students/${id}`);
-    } catch (error) {
-      console.log(error.response.data);
-    }
-  };
   useEffect(() => {
     const getStudents = async () => {
       try {
@@ -27,7 +19,14 @@ const ClassesStudent = ({ open, handleClose }) => {
     };
     getStudents();
   }, []);
-
+  const handleDeletes = async (id) => {
+    try {
+      setStud(stud.filter((student) => student._id !== id));
+      await axios.delete(`${url}/students/${id}`);
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
   return (
     <div className="LisStudents">
       {open ? (
@@ -40,6 +39,7 @@ const ClassesStudent = ({ open, handleClose }) => {
       <ul>
         {stud.map((studs) => {
           const { _id } = studs;
+          console.log(studs);
           return (
             <li className="liStudents" key={_id}>
               <Students {...studs} handleDeletes={handleDeletes} />

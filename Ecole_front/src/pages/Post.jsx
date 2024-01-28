@@ -8,18 +8,17 @@ import { authentified } from "../../authentified";
 const Post = () => {
   const [name, setName] = useState("");
   const [redirect, setRedirect] = useState(false);
+  const [user, setUser] = useState({});
   const postClasses = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${url}`, { name }, authentified);
+      const { data } = await axios.post(`${url}`, { name }, authentified);
       setRedirect(true);
     } catch (error) {
-      console.log(error.response.data);
-      console.log(authentified);
+      console.log(error);
     }
   };
   if (redirect) {
-    // useNavigate
     return <Navigate to={"/"} />;
   }
   return (

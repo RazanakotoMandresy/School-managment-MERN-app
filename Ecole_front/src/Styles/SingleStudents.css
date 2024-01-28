@@ -1,12 +1,11 @@
 .singleStudent {
-  background-color: #d3f5cf;
+  background-color: #24293e;
   margin-left: auto;
   margin-right: auto;
   width: 450px;
   height: auto;
   padding: 0 15px 15px 15px;
   border-radius: 25px;
-  top: 15%;
 }
 .singleStudent button {
   border: none;
@@ -33,4 +32,15 @@
   margin-top: -10px;
   border-radius: 25px;
   font-size: 18px;
+}
+@media only screen and (max-width: 1300px) {
+  .singleStudent{
+    margin-top: 15%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .singleStudent{
+    margin-top: 20%;
+    /* width: 400px; */
+  }
 }
