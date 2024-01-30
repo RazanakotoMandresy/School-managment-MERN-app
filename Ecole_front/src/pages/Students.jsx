@@ -2,6 +2,7 @@ import { FiSettings } from "react-icons/fi";
 import "../Styles/Classes.css";
 import { url } from "../../url";
 import { FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Students = ({ name, numberAtClass, profil, _id, handleDeletes }) => {
   return (
     <div className="studentsInfo">
@@ -11,7 +12,9 @@ const Students = ({ name, numberAtClass, profil, _id, handleDeletes }) => {
         </li>
         <li className="StudentsButtons">
           <button>
-            <FiSettings />
+            <Link to={`/students/${_id}`}>
+              <FiSettings />
+            </Link>
           </button>
           <button
             type="button"

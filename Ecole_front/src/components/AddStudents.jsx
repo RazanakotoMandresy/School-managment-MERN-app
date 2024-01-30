@@ -4,7 +4,7 @@ import "../Styles/addStudents.css";
 import axios from "axios";
 import { url } from "../../url";
 import { Navigate, useParams } from "react-router-dom";
-import { authentified } from "../../authentified";
+import { authentified } from "../authentified";
 const AddStudents = ({ handleClose }) => {
   const [name, setName] = useState("");
   const [imgStudent, setFile] = useState("");

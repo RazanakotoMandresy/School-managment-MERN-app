@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/SingleStudents.css";
 import { FiChevronDown, FiX } from "react-icons/fi";
+import axios from "axios";
+import { url } from "../../url";
+import { useParams } from "react-router-dom";
 
-const SingleStudents = () => {
+const SingleStudents = ({}) => {
+  const [stud, setStud] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    const getSingleStudents = async () => {
+      try {
+        const { data } = await axios.get(`${url}/students/${id}`);
+        await setStud(data);
+      } catch (error) {
+        console.log(error.response.data);
+      }
+    };
+    getSingleStudents();
+  }, []);
   return (
     <div className="singleStudent">
       <div className="head">
         <button>
           <FiX />
         </button>
-        <p>eleve de la classe </p>
+        <p> {stud.name} </p>
       </div>
+
       <div className="content">
-        <h3>Eleve de la classe: </h3>
-        <h3> numero : numero </h3>
+        <h3>Eleve de la classe: {stud.classesName} </h3>
+        <h3> numero : {stud.numberAtClass} </h3>
         <img src="" alt="" />
         <button className="more">
           <FiChevronDown />

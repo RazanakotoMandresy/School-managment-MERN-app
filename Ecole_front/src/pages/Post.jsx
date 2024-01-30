@@ -4,7 +4,7 @@ import { FiSend } from "react-icons/fi";
 import axios from "axios";
 import { url } from "../../url";
 import { Navigate } from "react-router-dom";
-import { authentified } from "../../authentified";
+import { authentified } from "../authentified";
 const Post = () => {
   const [name, setName] = useState("");
   const [redirect, setRedirect] = useState(false);

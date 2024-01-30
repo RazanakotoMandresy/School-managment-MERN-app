@@ -6,6 +6,7 @@ const studentsSchema = new Schema(
     classSchool: { type: Types.ObjectId, required: true },
     numberAtClass: { type: Number, required: true, default: 1 },
     profil: String,
+    classesName: { type: String },
   },
   { timestamps: true }
 );

@@ -3,7 +3,7 @@ import "../Styles/Home.css";
 import axios from "axios";
 import ClassesContent from "./ClassesContent";
 import { url } from "../../url";
-import { authentified } from "../../authentified";
+import { authentified } from "../authentified";
 const Home = (_) => {
   const [classes, setClasses] = useState([]);
   const handleDelete = async (_id) => {

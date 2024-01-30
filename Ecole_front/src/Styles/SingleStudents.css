@@ -1,11 +1,12 @@
 .singleStudent {
   background-color: #24293e;
-  margin-left: auto;
+  margin-left: 40%;
   margin-right: auto;
   width: 450px;
   height: auto;
   padding: 0 15px 15px 15px;
   border-radius: 25px;
+  position: fixed;
 }
 .singleStudent button {
   border: none;

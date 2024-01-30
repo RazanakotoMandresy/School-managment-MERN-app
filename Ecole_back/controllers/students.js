@@ -9,7 +9,6 @@ const createStudent = async (req, res) => {
     const { id: classId } = req.params;
     const classSchool = classId;
     const numbers = await ClassSchool.findOne({ _id: classId });
-
     if (!numbers) {
       return res
         .status(400)
@@ -36,6 +35,7 @@ const createStudent = async (req, res) => {
       classSchool,
       filiere,
       profil: newPath,
+      classesName: numbers.name,
     });
     // mi update anle anle classe
     const lenghtStudent = numbers.LisOfStudents.length;
@@ -103,7 +103,6 @@ const deleteStudent = async (req, res) => {
     const { id: StudId } = req.params;
     const stud = await Students.findOne({ _id: StudId });
     const classes = await ClassSchool.findOne({ _id: stud.classSchool });
-
     if (!classes) {
       return res.status(404).json({ msg: "cette classe n eexiste pas" });
     }

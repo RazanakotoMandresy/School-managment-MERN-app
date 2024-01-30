@@ -39,7 +39,6 @@ const ClassesStudent = ({ open, handleClose }) => {
       <ul>
         {stud.map((studs) => {
           const { _id } = studs;
-          console.log(studs);
           return (
             <li className="liStudents" key={_id}>
               <Students {...studs} handleDeletes={handleDeletes} />

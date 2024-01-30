@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../Styles/Home.css";
 import axios from "axios";
 import { url } from "../../url";
-import { authentified } from "../../authentified";
+import { authentified } from "../authentified";
 
 const ClassesContent = ({
   name,
@@ -17,7 +17,7 @@ const ClassesContent = ({
   const [idConnected, setIdConnected] = useState();
   useEffect(() => {
     const getWhoIsConnected = async () => {
-      try {
+      try { 
         const { data } = await axios.get(`${url}/auth`, authentified);
         await setIdConnected(data.userId);
       } catch (error) {

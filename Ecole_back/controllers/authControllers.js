@@ -47,5 +47,11 @@ const login = async (req, res) => {
     res.json(error);
   }
 };
-
-module.exports = { register, login };
+const whoIsConnected = async (req, res) => {
+  try {
+    res.status(200).json({ userId: req.user.userId, name: req.user.userName });
+    } catch (error) {
+    res.status(500).json({ msg: `${error}` });
+  }
+};
+module.exports = { register, login, whoIsConnected };
