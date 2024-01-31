@@ -10,20 +10,19 @@ const Students = ({ name, numberAtClass, profil, _id, handleDeletes }) => {
         <li>
           <img src={`${url}/${profil}`} alt="image" />
         </li>
-        <li className="StudentsButtons">
-          <button>
-            <Link to={`/students/${_id}`}>
-              <FiSettings />
-            </Link>
-          </button>
+        <li>
           <button
             type="button"
             onClick={() => {
               handleDeletes(_id);
             }}
+            className="StudentsButtons"
           >
             <FaTrashAlt />
           </button>
+          <Link to={`/students/${_id}`} className="studentsLink">
+            <FiSettings />
+          </Link>
         </li>
         <li className="studentsTxt">nom de l'utilisateur : {name}</li>
         <li className="studentsTxt"> numero de l'eleve: {numberAtClass} </li>

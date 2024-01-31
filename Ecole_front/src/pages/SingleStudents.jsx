@@ -3,10 +3,11 @@ import "../Styles/SingleStudents.css";
 import { FiChevronDown, FiX } from "react-icons/fi";
 import axios from "axios";
 import { url } from "../../url";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 const SingleStudents = ({}) => {
   const [stud, setStud] = useState({});
+  const [close, setClose] = useState(false);
   const { id } = useParams();
   useEffect(() => {
     const getSingleStudents = async () => {
@@ -19,10 +20,21 @@ const SingleStudents = ({}) => {
     };
     getSingleStudents();
   }, []);
+  const handleClose = () => {
+    setClose(true);
+  };
+  if (close) {
+    return <Navigate to={`/Classes/${stud.classSchool}`}></Navigate>;
+  }
   return (
     <div className="singleStudent">
       <div className="head">
-        <button>
+        <button
+          onClick={() => {
+            handleClose();
+            console.log(close);
+          }}
+        >
           <FiX />
         </button>
         <p> {stud.name} </p>

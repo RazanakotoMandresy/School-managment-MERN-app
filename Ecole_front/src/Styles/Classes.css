@@ -8,6 +8,7 @@
   margin-left: 0%;
   margin-right: 10%;
   background-image: url(back.jpg);
+  background-size: cover;
   border-radius: 25px;
   width: 80%;
 }
@@ -20,30 +21,44 @@
   font-size: 20px;
   margin: 2%;
 }
-.StudentsButtons {
-  float: right;
-}
 .studentsInfo .studentsTxt {
-  font-size: 25px;
-  margin-top: 50px;
+  font-size: 1.5vw;
+  margin-top: 2.5%;
   float: right;
   color: #2b4f71;
 }
-.StudentsButtons button {
-  font-size: 25px;
+.StudentsButtons {
+  float: right;
+  background-color: #2b4f71;
   padding: 15px;
-  background-color: #2b4f75;
+  font-size: 25px;
+  border: 0px;
+  margin-right: 4%;
+  margin-top: 2%;
 }
-.StudentsButtons :hover {
+.studentsLink {
+  float: right;
+  background-color: #2b4f71;
+  padding: 15px;
+  font-size: 25px;
+  margin-right: 1%;
+  color: black;
+  margin-top: 2%;
+}
+.StudentsButtons:hover {
+  background-color: #cccccc;
+}
+.studentsLink:hover {
+  border-radius: 0;
+  padding: 15px;
+  font-size: 25px;
+  margin-right: 1%;
   background-color: #cccccc;
 }
 @media only screen and (max-width: 1600px) {
   .studentsInfo img {
     height: 80px;
     width: 80px;
-  }
-  .studentsInfo .studentsTxt {
-    font-size: 20px;
   }
 }
 @media only screen and (max-width: 1390px) {
@@ -52,10 +67,12 @@
     width: 60px;
     margin-left: -5%;
   }
-  .studentsInfo .studentsTxt {
+
+  .StudentsButtons {
     font-size: 20px;
+    padding: 15px;
   }
-  .StudentsButtons button {
+  .studentsLink {
     font-size: 20px;
     padding: 15px;
   }
@@ -66,11 +83,10 @@
     width: 50px;
   }
   .studentsInfo .studentsTxt {
-    font-size: 17px;
-    float: none;
-    margin: 0.4%;
+    font-size: 2.3vw;
+    margin: 3% 5% 0 0;
   }
-  .StudentsButtons button {
+  .StudentsButtons {
     font-size: 15px;
     padding: 10px;
   }
@@ -78,18 +94,21 @@
     margin-left: -10%;
     width: 104%;
   }
+  .studentsLink {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .studentsLink:hover {
+    font-size: 15px;
+    padding: 8px;
+  }
 }
-@media only screen and (max-width: 738px) {
+@media only screen and (max-width: 800px) {
   .studentsInfo img {
     height: 45px;
     width: 45px;
   }
-  .studentsInfo .studentsTxt {
-    font-size: 15px;
-    float: none;
-    margin: 0.4%;
-  }
-  .StudentsButtons button {
+  .StudentsButtons {
     font-size: 15px;
     padding: 7px;
   }
@@ -97,66 +116,13 @@
     margin-left: -10%;
     width: 103%;
   }
-}
-
-@media only screen and (max-width: 675px) {
-  .studentsInfo img {
-    height: 35px;
-    width: 35px;
-  }
-  .studentsInfo .studentsTxt {
-    font-size: 12px;
-    float: none;
-    margin: 0.4%;
-  }
-  .StudentsButtons button {
-    font-size: 12px;
-    padding: 4px;
-    margin-top: -10px;
-  }
-  .studentsInfo ul {
-    margin-left: -15%;
-    width: 104%;
+  .studentsLink {
+    font-size: 15px;
+    padding: 7px;
   }
 }
-@media only screen and (max-width: 515px) {
-  .studentsInfo img {
-    height: 32px;
-    width: 32px;
-  }
+@media only screen and (max-width: 600px) {
   .studentsInfo .studentsTxt {
-    font-size: 10px;
-    float: right;
-    margin-top: 10px;
-  }
-  .StudentsButtons button {
-    font-size: 12px;
-    padding: 4px;
-    margin-top: -10px;
-  }
-  .studentsInfo ul {
-    margin-left: -15%;
-    width: 104%;
-  }
-}
-@media only screen and (max-width: 430px) {
-  .studentsInfo img {
-    height: 32px;
-    width: 32px;
-    margin-left: 2%;
-  }
-  .studentsInfo .studentsTxt {
-    font-size: 10px;
-    float: right;
-    margin-top: 10px;
-  }
-  .StudentsButtons button {
-    font-size: 12px;
-    padding: 4px;
-    margin-top: -10px;
-  }
-  .studentsInfo ul {
-    margin-left: 0%;
-    width: 104%;
+    margin: 5% 1% 0 -0;
   }
 }
