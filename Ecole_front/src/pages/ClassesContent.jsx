@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FiMoreHorizontal, FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "../Styles/Home.css";
-import axios from "axios";
-import { url } from "../../url";
-import { authentified } from "../authentified";
+import { useAppContext } from "../App";
 
 const ClassesContent = ({
   name,
@@ -14,19 +12,7 @@ const ClassesContent = ({
   handleDelete,
   createdBy,
 }) => {
-  const [idConnected, setIdConnected] = useState();
-  useEffect(() => {
-    const getWhoIsConnected = async () => {
-      try { 
-        const { data } = await axios.get(`${url}/auth`, authentified);
-        await setIdConnected(data.userId);
-      } catch (error) {
-        console.log(error.response.data);
-      }
-    };
-    getWhoIsConnected();
-  }, []);
-
+  const { idConnected } = useAppContext();
   return (
     <div>
       <h3>Nom de la classe : {name} </h3>

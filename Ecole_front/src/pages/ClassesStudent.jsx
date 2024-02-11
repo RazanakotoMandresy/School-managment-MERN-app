@@ -4,7 +4,6 @@ import axios from "axios";
 import { url } from "../../url";
 import { useParams } from "react-router-dom";
 import AddStudents from "../components/AddStudents";
-
 const ClassesStudent = ({ open, handleClose }) => {
   const { id } = useParams();
   const [stud, setStud] = useState([]);

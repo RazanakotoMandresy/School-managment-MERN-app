@@ -5,8 +5,8 @@
   padding: 10px;
 }
 .studentsInfo ul {
-  margin-left: 0%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url(back.jpg);
   background-size: cover;
   border-radius: 25px;

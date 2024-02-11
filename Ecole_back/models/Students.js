@@ -7,6 +7,7 @@ const studentsSchema = new Schema(
     numberAtClass: { type: Number, required: true, default: 1 },
     profil: String,
     classesName: { type: String },
+    IdCreator: { type: Types.ObjectId, required: true },
   },
   { timestamps: true }
 );

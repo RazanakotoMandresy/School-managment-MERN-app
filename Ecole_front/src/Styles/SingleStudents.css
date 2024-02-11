@@ -16,7 +16,7 @@
 .singleStudent button:hover {
   background-color: #c9cfdf;
   border-radius: 50%;
-}
+} 
 .singleStudent .more {
   float: right;
 }

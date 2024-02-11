@@ -5,13 +5,11 @@ const {
   createStudent,
   updateStudent,
   deleteStudent,
-  getAllClassSchool,
   searchStudents,
 } = require("../controllers/students");
 const authentification = require("../middleware/authentification");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
-
 const router = Router();
 router.get("/", searchStudents);
 router.get("/classe/:id", getAllStudents);

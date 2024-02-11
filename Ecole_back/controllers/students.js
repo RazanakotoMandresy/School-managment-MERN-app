@@ -5,7 +5,7 @@ const fs = require("fs");
 const createStudent = async (req, res) => {
   try {
     // classId id anle class Stria efa manao get efa kithina le izy vo kithina
-    const { name, numberAtClass, filiere } = req.body;
+    const { name, numberAtClass, filiere, IdCreator } = req.body;
     const { id: classId } = req.params;
     const classSchool = classId;
     const numbers = await ClassSchool.findOne({ _id: classId });
@@ -24,6 +24,7 @@ const createStudent = async (req, res) => {
         msg: `vous ne pouvez pas ajouter des eleves car vous n'etes pas le createur de la classe`,
       });
     }
+
     const { originalname, path } = req.file;
     const parts = originalname.split(".");
     const ext = parts[parts.length - 1];
@@ -36,6 +37,7 @@ const createStudent = async (req, res) => {
       filiere,
       profil: newPath,
       classesName: numbers.name,
+      IdCreator: numbers.createdBy,
     });
     // mi update anle anle classe
     const lenghtStudent = numbers.LisOfStudents.length;
